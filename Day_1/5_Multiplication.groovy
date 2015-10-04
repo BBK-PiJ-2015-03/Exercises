@@ -16,7 +16,7 @@ str = System.console().readLine()
 num2 = Integer.parseInt(str)
 while (!finished) {
     count++;
-    total = (num1 + num1) + total
+    total = num1 + total
     if (count == num2) {
         finished = true
     }
