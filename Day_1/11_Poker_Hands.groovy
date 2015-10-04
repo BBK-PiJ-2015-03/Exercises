@@ -97,5 +97,117 @@ while (!st2) {
         st2 = true
     }
 }
-println "First Card " + c1 + " " + s1
-println "Second Card " + c2 + " " + s2
+//Input of Third Card
+while (!cd3) {
+    println "Third Card"
+    print "> "
+    c3 = System.console().readLine()
+    if (c3 == "1" || c3 == "2" || c3 == "3" || c3 == "4" || c3 == "5" || c3 == "6" || c3 == "7" || c3 == "8" || c3 == "9" || c3 == "10") {
+        i3 = Integer.parseInt(c3)
+        cd3 = true
+    } else if (c3 == "J" || c3 == "j") {
+        i3 = 11
+        cd3 = true
+    } else if (c3 == "Q" || c3 == "q") {
+        i3 = 12
+        cd3 = true
+    } else if (c3 == "K" || c3 == "k") {
+        i3 = 13
+        cd3 = true
+    } else {
+        println "Invalid Card Entered"
+        println " "
+    }
+}
+while (!st3) {
+    println " "
+    println "Please enter card suit"
+    println "1 - Spades"
+    println "2 - Hearts"
+    println "3 - Diamonds"
+    println "4 - Clubs"
+    println " "
+    print "> "
+    s3 = Integer.parseInt(System.console().readLine())
+    if (s3 > 4 && s3 < 0) {
+        println "Sorry, that is not a valid option"
+    } else {
+        st3 = true
+    }
+}
+//Input of Fourth Card
+while (!cd4) {
+    println "Fourth Card"
+    print "> "
+    c4 = System.console().readLine()
+    if (c4 == "1" || c4 == "2" || c4 == "3" || c4 == "4" || c4 == "5" || c4 == "6" || c4 == "7" || c4 == "8" || c4 == "9" || c4 == "10") {
+        i4 = Integer.parseInt(c4)
+        cd4 = true
+    } else if (c4 == "J" || c4 == "j") {
+        i4 = 11
+        cd2 = true
+    } else if (c4 == "Q" || c4 == "q") {
+        i4 = 12
+        cd4 = true
+    } else if (c4 == "K" || c4 == "k") {
+        i4 = 13
+        cd4 = true
+    } else {
+        println "Invalid Card Entered"
+        println " "
+    }
+}
+while (!st4) {
+    println " "
+    println "Please enter card suit"
+    println "1 - Spades"
+    println "2 - Hearts"
+    println "3 - Diamonds"
+    println "4 - Clubs"
+    println " "
+    print "> "
+    s4 = Integer.parseInt(System.console().readLine())
+    if (s4 > 4 && s4 < 0) {
+        println "Sorry, that is not a valid option"
+    } else {
+        st4 = true
+    }
+}
+//Input of Fifth Card
+while (!cd5) {
+    println "Fifth Card"
+    print "> "
+    c5 = System.console().readLine()
+    if (c5 == "1" || c5 == "2" || c5 == "3" || c5 == "4" || c5 == "5" || c5 == "6" || c5 == "7" || c5 == "8" || c5 == "9" || c5 == "10") {
+        i5 = Integer.parseInt(c5)
+        cd5 = true
+    } else if (c5 == "J" || c5 == "j") {
+        i5 = 11
+        cd5 = true
+    } else if (c5 == "Q" || c5 == "q") {
+        i5 = 12
+        cd5 = true
+    } else if (c5 == "K" || c5 == "k") {
+        i5 = 13
+        cd5 = true
+    } else {
+        println "Invalid Card Entered"
+        println " "
+    }
+}
+while (!st5) {
+    println " "
+    println "Please enter card suit"
+    println "1 - Spades"
+    println "2 - Hearts"
+    println "3 - Diamonds"
+    println "4 - Clubs"
+    println " "
+    print "> "
+    s5 = Integer.parseInt(System.console().readLine())
+    if (s5 > 4 && s5 < 0) {
+        println "Sorry, that is not a valid option"
+    } else {
+        st5 = true
+    }
+}
