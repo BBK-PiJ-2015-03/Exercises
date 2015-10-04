@@ -5,20 +5,23 @@
 // a % b is zero, then a is divisible by b).
 // Answer:
 
+boolean finished = false
 int rem,count = 1
 String result
 println "Enter a number"
 print "> "
 String str = System.console().readLine()
 int num = Integer.parseInt(str)
-while (count <= num) {
+while (!finished) {
     count++;
     rem = num % count
-    if (rem != 0) {
+    if (num == count) {
+        finished = true
+    } else if (rem != 0) {
         result = "Prime"
     } else if (rem == 0) {
         result = "Not"
         break;
-    }
+    } 
 }
 println result
