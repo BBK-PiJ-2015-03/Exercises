@@ -6,13 +6,13 @@
 int max = 0, i
 String str
 boolean finished = false
-prinln "Enter a sequence of numbers (end with -1)"
+println "Enter a sequence of numbers (end with -1)"
 while (!finished) {
     print "> "
     str = System.console().readLine()
     i = Integer.parseInt(str)
     if (i == -1) {
-        print max
+        println max
         finished = true
     } else if (i > max) {
         max = i
