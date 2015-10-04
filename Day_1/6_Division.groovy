@@ -7,7 +7,7 @@
 boolean finished = false
 int num1, num2, num3, total, count
 String str
-println "Devision Calculator"
+println "Division Calculator"
 println "Enter a number"
 print "> "
 str = System.console().readLine()
