@@ -7,53 +7,19 @@
 
 int i, p
 String str, result, fresult = "empty"
-boolean finished = false, up = true, down = true
+boolean finished = false
 println "Enter a sequence of numbers (end with -1)"
 while (!finished) {
     p = i
     print "> "
     str = System.console().readLine()
     i = Integer.parseInt(str)
-    if (i > p) {
-        result = "Yes"
-        finished = true
-        up = false
-    } else if (i < p) {
-        result = "Yes"
-        finished = true
-        down = false
-    }
-}
-while (!up) {
-    p = i
-    print "> "
-    str = System.console().readLine()
-    i = Integer.parseInt(str)
     if (i == -1) {
-    up = true
+        finished = true
     } else if (i > p) {
         result = "Yes"
-    } else {
-        result = "No"
-    }
-    if (result == "No") {
-        fresult = result
-    }
-}
-while (!down) {
-    p = i
-    print "> "
-    str = System.console().readLine()
-    i = Integer.parseInt(str)
-    if (i == -1) {
-    down = true
     } else if (i < p) {
-        result = "Yes"
-    } else {
-        result = "No"
-    }
-    if (result == "No") {
-        fresult = result
+        fresult = "no"
     }
 }
 if (fresult == "empty") {
