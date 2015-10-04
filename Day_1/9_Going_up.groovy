@@ -14,12 +14,14 @@ while (!finished) {
     print "> "
     str = System.console().readLine()
     i = Integer.parseInt(str)
-    if (i == -1) {
+    if (i == p) {
+        fresult = "No"
+    } else if (i == -1) {
         finished = true
     } else if (i > p) {
         result = "Yes"
     } else if (i < p) {
-        fresult = "no"
+        fresult = "No"
     }
 }
 if (fresult == "empty") {
