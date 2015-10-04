@@ -5,7 +5,7 @@
 // “/” or “%” operators
 
 boolean finished = false
-int num1, num2, total, count
+int num1, num2, num3, total, count
 String str
 println "Devision Calculator"
 println "Enter a number"
@@ -16,6 +16,7 @@ println "Enter another number"
 print "> "
 str = System.console().readLine()
 num2 = Integer.parseInt(str)
+num3 = num1
 while (!finished) {
     total++;
     num1 = num1 - num2
@@ -23,7 +24,7 @@ while (!finished) {
         finished = true
         println total
     } else if (num1 < 0) {
-        println num1 + " cannot be divided by " + num2
+        println num3 + " cannot be divided by " + num2
         finished = true
     }
 }
