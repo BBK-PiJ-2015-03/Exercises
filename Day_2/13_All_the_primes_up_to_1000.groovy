@@ -19,6 +19,6 @@ while (!finished) {
         }
     } 
     if (p != -1) {
-        print p + ", "
+	print p + ", "
     }
 }
