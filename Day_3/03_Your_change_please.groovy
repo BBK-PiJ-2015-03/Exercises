@@ -8,7 +8,6 @@ print "How much is your total? £"
 Double totalAmount = Double.parseDouble(System.console().readLine())
 print "How much have you paid: £"
 Double givenAmount = Double.parseDouble(System.console().readLine())
-//Rounds change amount to 2 decimal spaces
 Double changeAmount = givenAmount - totalAmount
 
 println " "
