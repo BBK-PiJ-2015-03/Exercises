@@ -3,57 +3,62 @@
 //program should output the correct change specifying the amount of notes (50, 20, 10, 5) and coins (2, 1, 0.50, 0.20,
 //0.10, 0.05, 0.02, 0.01) needed.
 
-// Get a random amount between 0 - 100
-Double randomAmount = Math.abs(100 * Math.random())
-
-// Round amount to 2 decimal spaces
-// Credit: http://stackoverflow.com/questions/4560546/how-do-i-round-a-number-in-groovy
-Double totalAmount = Math.round(randomAmount * 100) / 100
-
-println "Your Total is: £" + totalAmount 
+int nFifty, nTwenty, nTen, nFive, pTwo, pOne, fifty, twenty, ten, five, two, one
+print "How much is your total? £"
+Double totalAmount = Double.parseDouble(System.console().readLine())
 print "How much have you paid: £"
 Double givenAmount = Double.parseDouble(System.console().readLine())
-
 //Rounds change amount to 2 decimal spaces
-Double changeAmount = Math.round((givenAmount - totalAmount) * 100) / 100
+Double changeAmount = givenAmount - totalAmount
 
 //Calculates amount of change owed
-for (int nFifty = 0; changeAmount > 50; nFifty++) {
+while (changeAmount > 50) {
+    nFifty++
     changeAmount = changeAmount - 50
 }
-for (int nTwenty = 0; changeAmount > 20; nTwenty++) {
+while (changeAmount > 20) {
+    nTwenty++
     changeAmount = changeAmount - 20
 }
-for (int nTen = 0; changeAmount > 10; nTen++) {
+while (changeAmount > 10) {
+    nTen++
     changeAmount = changeAmount - 10
 }
-for (int nFive = 0; changeAmount > 5; nFive++) {
+while (changeAmount > 5) {
+    nFive++
     changeAmount = changeAmount - 5
 }
-for (int pTwo = 0; changeAmount > 2; pTwo++) {
+while (changeAmount > 2) {
+    pTwo++
     changeAmount = changeAmount - 2
 }
-for (int pOne = 0; changeAmount > 1; pOne++) {
+while (changeAmount > 1) {
+    pOne++
     changeAmount = changeAmount - 1
 }
-
-for (int fifty = 0; changeAmount > 0.50; fifty++) {
+while (changeAmount > 0.50) {
+    fifty++
     changeAmount = changeAmount - 0.50
 }
-for (int twenty = 0; changeAmount > 0.20; twenty++) {
+while (changeAmount > 0.20) {
+    twenty++
     changeAmount = changeAmount - 0.20
 }
-for (int ten = 0; changeAmount > 0.10; ten++) {
+while (changeAmount > 0.10) {
+    ten++
     changeAmount = changeAmount - 0.10
 }
-for (int five = 0; changeAmount > 0.5; five++) {
-    changeAmount = changeAmount - 0.5
+while (changeAmount > 0.05) {
+    five++
+    changeAmount = changeAmount - 0.05
 }
-for (int two = 0; changeAmount > 0.2; two++) {
-    changeAmount = changeAmount - 0.2
+while (changeAmount > 0.02) {
+    two++
+    changeAmount = changeAmount - 0.02
 }
-for (int one = 0; changeAmount > 0.1; one++) {
-    changeAmount = changeAmount - 0.1
+while (changeAmount > 0.01) {
+    one++
+    changeAmount = changeAmount - 0.01
 }
 println " "
 println "Your Change is:"
