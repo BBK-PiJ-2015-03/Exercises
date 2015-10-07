@@ -1,25 +1,24 @@
 // Task:
 // Write a program that prints all on screen all prime numbers up to 1,000.
 
-int rem, count, num, prime
-boolean finished1 = false, finished2 = false
-while (!finished1) {
-    num++
-    while (!finished2) {
-        count++
-        rem = num % count
-        if (num == count) {
-            finished2 = true
-        } else if (rem != 0) {
-            prime = num
-        } else if (rem == 0) {
-            prime = 0
+int n = 2, r, c, p
+boolean finished = false
+while (!finished) {
+    if (n == 1000) {
+        finished = true
+        break;
+    }
+    n++
+    for (c = 2; n != c; c++) {
+        r = n % c
+        if (r != 0) {
+            p = n
+        } else {
+            p = -1
+            break;
         }
+    } 
+    if (p != -1) {
+        print p + ", "
     }
-    if (prime != 0) {
-        println prime ", "
-    }
-    if (prime > 1000) {
-        finished1 = true
-    }
-}    
+}
