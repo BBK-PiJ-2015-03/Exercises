@@ -5,7 +5,6 @@
 //Hint: In the same way that there exists an Integer.parseInt() method to parse integers, there is a Double.parseDouble()
 //method to parse real numbers.
 
-Double total
 println "Calculator v1.0"
 println "Enter a number"
 print "> "
