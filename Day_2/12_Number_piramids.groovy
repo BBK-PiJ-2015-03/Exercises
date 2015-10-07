@@ -8,31 +8,15 @@
 // 666666
 // 7777777
 
-int b
-for (b = 0; b < 1; b++) {
-   print "1"
-}
-println ""
-for (b = 0; b < 2; b++) {
-   print "2"
-}
-println ""
-for (b = 0; b < 3; b++) {
-   print "3"
-}
-println ""
-for (b = 0; b < 4; b++) {
-   print "4"
-}
-println ""
-for (b = 0; b <5; b++) {
-   print "5"
-}
-println ""
-for (b = 0; b <6; b++) {
-   print "6"
-}
-println ""
-for (b = 0; b <7; b++) {
-   print "7"
+int b, n = 1
+boolean finished = false
+while (!finished) {
+    for (b = 0; b < n; b++) {
+        print n
+    }
+    println ""
+    n++;
+    if (n == 8) {
+        finished = true
+    }
 }
