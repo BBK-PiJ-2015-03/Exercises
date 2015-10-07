@@ -10,7 +10,7 @@ for (number = 0; number != numberToGuess; count++) {
     number = Integer.parseInt(System.console().readLine())
     if (number == numberToGuess) {
         println "CORRECT!"
-        println "Your needed " + count + " guesses."
+        println "You needed " + count + " guesses."
     } else if (number < numberToGuess) {
         println "No! my number is higher"
     } else {
