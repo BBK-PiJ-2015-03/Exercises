@@ -4,11 +4,9 @@ Is it easy to do this both iteratively and recursively? Try both ways and see wh
 one takes too long, try the other way.*/
 
 int numFactorial(int n) {
-    int c, p
-    for (int i = 0; i != n; i++) {
-        p = n * i
-        c = p + n
+    for (int i = n-1; i != 0; i = i-1) {
+        n = (n * i)
     }
-    return c
+    return n
 }
 
