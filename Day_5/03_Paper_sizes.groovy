@@ -10,15 +10,15 @@ two, e.g. the short side of Din-A2 is as long as the long side of Din-A3, while 
 long as the short side of Din-A3.*/
 
 // Method to calculate paper size
-void paperSize(int input, int w, int h) {
+void paperSize(int input, Paper w, Paper h) {
     if (input == 0) {
     println "D0000 Width x Height"
     return;
     } else { 
         for (int i = 0; input != i; i++) {
-            h = w
-            w = w / 2
-            input = input -1
+            Paper.h = Paper.w
+            Paper.w = Paper.w / 2
+            println "Round"
         }
         return;
     }
@@ -26,83 +26,69 @@ void paperSize(int input, int w, int h) {
 
 //Paper class
 class Paper {
-    int width
-    int height
+    int w
+    int h
 }
 
-//Execution of code befins here
-int D0000 = 0, D00 = 1, A0 = 2, A1 = 3, A2 = 4, A3 = 5, A4 = 6, A5 = 7, A6 = 8, A7 = 9, A8 = 10, A9 = 11, A10 = 12
+//Execution of code begins here
 Paper size = new Paper()
-size.width = 1682
-size.height = 2378
-println "Page Sizes"
-println "1 - D0000"
-println "2 - D00"
-println "3 - A0"
-println "4 - A1"
-println "5 - A2"
-println "6 - A3"
-println "7 - A4"
-println "8 - A5"
-println "9 - A6"
-println "10 - A7"
-println "11 - A8"
-println "12 - A9"
-println "13 - A10"
+size.w = 1682
+size.h = 2378
+int choice
 println "Enter Page Size: "
-int input = Integer.parseInt(System.console().readLine())
+String input = System.console().readLine()
 switch (input) {
-    case 1:
-        input = D0000
+    case "D000":
+        choice = 0
         break;
-    case 2:
+    case "D00":
         println "D00 Width x Height"
-        input = D00
+        choice = 1
         break;
-    case 3:
+    case "A0":
         println "A0 Width x Height"
-        input = A0
+        choice = 2
         break;
-    case 4:
+    case "A1":
         println "A1 Width x Height"
-        input = A1
+        choice = 3
         break;
-    case 5:
+    case "A2":
         println "A2 Width x Height"
-        input = A2
+        choice = 4
         break;
-    case 6:
+    case "A3":
         println "A3 Width x Height"
-        input = A3
+        choice = 5
         break;
-    case 7:
+    case "A4":
         println "A4 Width x Height"
-        input = A4
+        choice = 6
         break;
-    case 8:
+    case "A5":
         println "A5 Width x Height"
-        input = A5
+        choice = 7
         break;
-    case 9:
+    case "A6":
         println "A6 Width x Height"
-        input = A6
+        choice = 8
         break;
-    case 10:
+    case "A7":
         println "A7 Width x Height"
-        input = A7
+        choice = 9
         break;
-    case 11:
+    case "A8":
         println "A8 Width x Height"
-        input = A8
+        choice = 10
         break;
-    case 12:
+    case "A9":
         println "A9 Width x Height"
-        input = A9
+        choice = 11
         break;
-    case 13:
+    case "A10":
         println "A10 Width x Height"
-        input = A10
+        choice = 12
         break;
 }
-paperSize(input, size.width, size.height)
-println size.width + "mm x " + size.height + "mm"
+paperSize(choice, size.w, size.h)
+println size.w + "mm x " + size.h + "mm"
