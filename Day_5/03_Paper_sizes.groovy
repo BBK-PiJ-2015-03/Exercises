@@ -13,12 +13,12 @@ long as the short side of Din-A3.*/
 void paperSize(int input, int w, int h) {
     if (input == 0) {
     println "D0000 Width x Height"
-    println w + "mm x " + h + "mm"
     return;
     } else { 
-        for (int i = 0; input > 0; i++) {
+        for (int i = 0; input != i; i++) {
             h = w
             w = w / 2
+            input = input -1
         }
         return;
     }
@@ -26,14 +26,15 @@ void paperSize(int input, int w, int h) {
 
 //Paper class
 class Paper {
-    int w
-    int h
+    int width
+    int height
 }
 
-//Execution of code begins here
+//Execution of code befins here
 int D0000 = 0, D00 = 1, A0 = 2, A1 = 3, A2 = 4, A3 = 5, A4 = 6, A5 = 7, A6 = 8, A7 = 9, A8 = 10, A9 = 11, A10 = 12
 Paper size = new Paper()
-int size.width = 1682, size.height = 2378
+size.width = 1682
+size.height = 2378
 println "Page Sizes"
 println "1 - D0000"
 println "2 - D00"
@@ -50,8 +51,6 @@ println "12 - A9"
 println "13 - A10"
 println "Enter Page Size: "
 int input = Integer.parseInt(System.console().readLine())
-
-//choice to calculate amount of times for loop in method is run
 switch (input) {
     case 1:
         input = D0000
@@ -105,7 +104,5 @@ switch (input) {
         input = A10
         break;
 }
-
-// Print paper size
 paperSize(input, size.width, size.height)
-
+println size.width + "mm x " + size.height + "mm"
