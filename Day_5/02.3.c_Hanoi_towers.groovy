@@ -14,26 +14,18 @@ class TOH {
     int discs;
 }
 TOH input = new TOH()
-println "Enter amount of disc to move: "
+println "Enter amount of disc to move:"
 print "> "
 input.discs = Integer.parseInt(System.console().readLine())
-movesHanoi(input.discs)
-println input.discs
+println "Minimum amount of moves:"
+println "> " + towerMoves(input.discs)
 
 // Method to calculate total amount of moves
-int movesHanoi(int n) {
-    if (n < 1) {
-        return 0;
+int towerMoves(int n) {
+    if (n < 2) {
+        return 2;
     } else {
-        for (c = 0; c != n; c++) {
-        int i = 3
-        int total = (i * 3 - 1)
-        i = i * 3
-        }
-        return total;
+        int total = 3 * towerMoves(n-1) + 2;
+        return total
     }
 }
-
-/*
- Code is buggy
-*/
