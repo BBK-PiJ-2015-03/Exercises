@@ -5,22 +5,26 @@ one takes too long, try the other way.*/
 
 //Iterative version
 int numFactorial(int n) {
-    for (int i = n-1; i != 0; i = i-1) {
-        n = (n * i)
-    }
-    return n
-}
-
-//Recursive version (did have help from the 'basic recursion' document)
-int numFactorial(int n) {
-    if (n == 1) {
+    if (n < 2) {
         return n;
     } else {
-    int i = n-1
-    n = n*numFactorial(i)
+        for (int i = n-1; i != 0; i = i-1) {
+            n = (n * i)
+        }
     return n
     }
 }
-println numFactorial(5)
 
+//Recursive version (Had help from the 'basic recursion' document)
+int numFactorial(int n) {
+    if (n < 2) {
+        return n;
+    } else {
+        return n * numFactorial(n-1);
+    }
+}
+println numFactorial(0)
 
+/* Result of above code is
+    479001600
+*/    
