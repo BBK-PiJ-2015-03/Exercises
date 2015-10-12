@@ -23,7 +23,7 @@ int numFactorial(int n) {
         return n * numFactorial(n-1);
     }
 }
-println numFactorial(0)
+println numFactorial(12)
 
 /* Result of above code is
     479001600
