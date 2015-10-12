@@ -10,35 +10,24 @@ two, e.g. the short side of Din-A2 is as long as the long side of Din-A3, while 
 long as the short side of Din-A3.*/
 
 // Method to calculate paper size
-void paperSize(int input, paperW w, paperH h) {
+String paperSize(int input) {
+    int w = 1682
+    int h = 2378
     if (input == 0) {
     println "D0000 Width x Height"
-    return;
+    return w + "mm x " + h + "mm"
     } else { 
-        for (int i = 0; input != i; i++) {
-            h.h = w.w
-            w.w = w.w / 2
-            println "Round"
+        println "Below is test for amount of loops"
+        for (int i = 0; i < input; i++) {
+            w = h / 2
+            h = w * 2
+            println "Test: loop " + (i+1) //Added for debugging - so I know how many times this loops
         }
-        return;
+        return w + "mm x " + h + "mm"
     }
 }
 
-//Height Class
-class paperH {
-    int h
-}
-
-//Width Class
-class paperW {
-    int w
-}
-
 //Execution of code begins here
-paperH hsize = new paperH() // I’m getting an error here
-hsize.h = 2378
-paperW wsize = new paperW()
-wsize.w = 1682
 int choice
 println "Enter Page Size: "
 String input = System.console().readLine()
@@ -98,7 +87,4 @@ switch (input) {
 }
 
 //Calls method
-paperSize(choice, wsize.w, hsize.h)
-
-//Prints result
-println wsize.w + "mm x " + hsize.h + "mm"
+println paperSize(choice)
