@@ -10,20 +10,30 @@ Create a method that calculates the number of moves necessary to move a set of n
 post to the last post. Hint: if you want to play monk yourself in order to better understand the problem, ask the
 lecturer for a “Hanoi envelope”.*/
 
-//A lot of help from youtube videos and alot of credit to http://www.javawithus.com/programs/towers-of-hanoi
-
-void TOH(int n, String start, String middle, String end) {
-    if (n == 1) {
-        println start + " -> " + end
-    } else if (n>0) {
-        TOH(n-1, start, end, middle)
-        println start + " -> " + end
-        TOH(n-1, middle, start, end)
-    }
-        return;
+class TOH {
+    int discs;
 }
-
+TOH input = new TOH()
 println "Enter amount of disc to move: "
 print "> "
-int d = Integer.parseInt(System.console().readLine())
-TOH(d, "A", "B", "C")
+input.discs = Integer.parseInt(System.console().readLine())
+movesHanoi(input.discs)
+println input.discs
+
+// Method to calculate total amount of moves
+int movesHanoi(int n) {
+    if (n < 1) {
+        return 0;
+    } else {
+        for (c = 0; c != n; c++) {
+        int i = 3
+        int total = (i * 3 - 1)
+        i = i * 3
+        }
+        return total;
+    }
+}
+
+/*
+ Code is buggy
+*/
