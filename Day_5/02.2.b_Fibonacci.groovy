@@ -4,11 +4,13 @@ one takes too long, try the other way.
 When doing it recursively, do it with and without memoization. Compare the time that is needed in each case
 to find F(40) or F(45).*/
 
-//Iterative Version
+/*  VERY IMPORTANT! for this code to run one of the methods must be commented out  */
 
-//Method of Fibonacci
+//Iterative Version Method of Fibonacci
 int F(int e) {
-    if (e == 1 || e == 2) {
+    if (e < 1) {
+        return e;
+    } else if (e < 4) {
         return 1
     } else {
         int total, n1 = 1, n2 = 1
@@ -21,26 +23,20 @@ int F(int e) {
     }
 }
 
-//Execution of code starts here
-String Str
-int Count
-println "Which number of the Fibonacci sequence would you like"
-print "> "
-Str = System.console().readLine()
-Count = Integer.parseInt(Str)
-println F(Count)
 
-// Recursive Version
 
-//Method of Fibonacci
+// Recursive Version Method of Fibonacci
 int F(int e) {
-    if (e == 1 || e == 2) {
-        return 1
+    if (e < 2) {
+        return 0;
+    } else if (e < 4) {
+        return 1;
     } else {
         int total = F(e-1) + F(e-2) //Had help from the 'basic recursion' document
         return total
     }
 }
+
 
 //Execution of code starts here
 String Str
