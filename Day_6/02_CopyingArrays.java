@@ -1,4 +1,4 @@
-s	/* TASK
+/* TASK
  Create a new Java class called ArrayCopier with a method called copy that takes two arrays of integers as parameters.
  The method should copy the elements of the first array (you can call it src, from "source") to the second
  one (dst, from "destination") as much as possible.
@@ -29,5 +29,3 @@ public class CopyingArrays{
         
     }
 }
-
-l
