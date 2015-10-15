@@ -38,7 +38,7 @@ public class CreatingMatrices{
     }
 
     public int[][] setElement(int x, int y, int e){
-        int[][] tempArray = new int[x][y];
+        int[][] tempArray = new int[x+1][y+1];
         tempArray[x][y] = e;
         return tempArray;
 
