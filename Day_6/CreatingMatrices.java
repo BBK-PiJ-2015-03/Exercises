@@ -33,6 +33,7 @@ public class CreatingMatrices{
                 newArray[c][i] = 1;
                 System.out.println("Array" + "[" + c + "]" + "[" + i + "]" + " = 1");   
             }
+            System.out.println(" ");
         }
         return newArray;
     }
