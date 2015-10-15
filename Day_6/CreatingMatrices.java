@@ -26,16 +26,22 @@ elements (one-by-one, by rows, and by columns), and prints the matrix on the scr
 public class CreatingMatrices{
 
     public int[][] Matrix(int x, int y){
-
         int[][] newArray = new int[x][y];
         newArray[1][2] = 7;
         for (int c = 0; c <= x-1; c++){
             for (int i = 0; i <= y-1; i++) {
                 newArray[c][i] = 1;
-                System.out.println("Writing to " + c + " " + i);
+                System.out.println("Array" + "[" + c + "]" + "[" + i + "]" + " = 1");   
             }
         }
         return newArray;
+    }
+
+    public int[][] setElement(int x, int y, int e){
+        int[][] tempArray = new int[x][y];
+        tempArray[x][y] = e;
+        return tempArray;
+
     }
 
 }
