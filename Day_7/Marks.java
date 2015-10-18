@@ -19,9 +19,9 @@ public class Marks {
 		} while (term.marks != -1);
 		
 		//Prints Results
-		System.out.println(this.term.dist + " Distinctions");
-		System.out.println(this.term.pass + " Passes");
-		System.out.println(this.term.dist + " Failed");
-		System.out.println(this.term.dist + " Invalid");
+		System.out.println(term.dist + " Distinctions");
+		System.out.println(term.pass + " Passes");
+		System.out.println(term.fail + " Failed");
+		System.out.println(term.invl-1 + " Invalid");
 	}
 }
