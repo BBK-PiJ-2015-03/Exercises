@@ -1,13 +1,20 @@
 public class main {
 	public static void main(String[] args) {
 
-		//Add first new spy with ID #12
+		//Add four new spies
 		Spy jimmy = new Spy(12);
 
-		//Add second new spy with ID #94
 		Spy bond = new Spy(97);
 
-		//Die method on first spy 'jimmy'
-		jimmy.die();
+		Spy micky = new Spy(23);
+
+		Spy donald = new Spy(101);
+
+		//Killing three of the spies
+		bond.die();
+
+		micky.die();
+
+		donald.die();
 	}
 }
