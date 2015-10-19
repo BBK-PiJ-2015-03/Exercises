@@ -10,6 +10,12 @@ public class Spy {
 		System.out.println("Total Spies: " + spyCount);
 	}
 
+	public void die() {
+		System.out.println("Spy " + id + " had been detected and eliminated");
+		spyCount = spyCount-1;
+		System.out.println("Total Spies: " + spyCount);
+	}
+
 	public static int getNumberOfSpies() {
 		return spyCount;
 
