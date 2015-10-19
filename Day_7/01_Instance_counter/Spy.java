@@ -5,8 +5,8 @@ public class Spy {
 
 	public Spy(int id) {
 		spyCount++;
-		id = this.id;
-		System.out.println("ID: #" + this.id);
+		this.id = id;
+		System.out.println("ID: #" + id);
 		System.out.println("Total Spies: " + spyCount);
 	}
 
