@@ -4,7 +4,7 @@ public class LinkedList {
 	int size;
 
 
-	public void addNode(Node newNode){
+	public void addNode(int data){
 	/** 
 	* Add method
 	* Head 					     Tail
@@ -13,7 +13,7 @@ public class LinkedList {
 	* 
 	*/
 
-	
+	Node newNode = new Node(data);
 		if (size == 0){
 			head = newNode;
 			tail = newNode;
@@ -26,13 +26,13 @@ public class LinkedList {
 
 	}
 
-	public Node previousNode(Node thisNode){
+	public Node previousNode(int data){
 		Node temp = new Node();
 		temp = head;
-		if (temp.next == thisNode) {
+		if (temp.data == data) {
 			return temp;
 		} else {
-			while (temp.next != thisNode) {
+			while (temp.next.data != data) {
 				temp = temp.next;
 			}
 			return temp;
@@ -52,10 +52,13 @@ public class LinkedList {
 	}
 
 
-
-
-	// Print Method
-
+	public void del(int data){
+		if (size == 0) {
+			System.out.println("List is empty.");
+		} else {
+			// under construction
+		}
+	}
 	// Delete Method
 
 }

@@ -4,19 +4,15 @@ public class Test {
 
 		LinkedList L = new LinkedList();
 		
-		Node fNode = new Node(21);
-		L.addNode(fNode);
-		Node sNode = new Node(53);
-		L.addNode(sNode);
-		Node tNode = new Node(35);
-		L.addNode(tNode);
-		Node frNode = new Node(55);
-		L.addNode(frNode);
+		L.addNode(22);
+		L.addNode(34);
+		L.addNode(64);
+		L.addNode(32);
 
 		System.out.println("Print full list:");
 		L.printNodes();
-		System.out.println("Print node prior to tNode(35)");
-		System.out.println(L.previousNode(tNode));
+		System.out.println("Print node prior to (64)");
+		System.out.println(L.previousNode(64));
 
 	}
 
