@@ -52,10 +52,30 @@ public class LinkedList {
 	}
 
 
-	public void del(int data){
+	public boolean del(int data){
 		if (size == 0) {
 			System.out.println("List is empty.");
+			return false;
 		} else {
+			Node temp = new Node();
+			temp = head;
+			while (temp.data != data){
+				temp = temp.next;
+			}
+			if (tail == temp){
+				tail = previousNode(data);
+				previousNode(data).next = null;
+				return true;
+			} else {
+				if (head == temp) {
+					head = temp.next;
+					temp.next = null;
+					return true;
+				} else {
+					previousNode(data).next = temp.next;
+					return true;
+				}
+			}
 			// under construction
 		}
 	}
