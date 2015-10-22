@@ -1,18 +1,23 @@
 public class Test {
+
 	public static void main(String[] args) {
+
 		LinkedList L = new LinkedList();
-
-		Node n1 = new Node();
-		n1.n = 1;
-		n1.next = null;
-		L.add(n1);
 		
-		Node n2 = new Node();
-		n2.n = 2;
-		n2.next = null;
-		L.add(n2);
+		Node fNode = new Node(21);
+		L.addNode(fNode);
+		Node sNode = new Node(53);
+		L.addNode(sNode);
+		Node tNode = new Node(35);
+		L.addNode(tNode);
+		Node frNode = new Node(55);
+		L.addNode(frNode);
 
-		L.printList();
+		System.out.println("Print full list:");
+		L.printNodes();
+		System.out.println("Print node prior to tNode(35)");
+		System.out.println(L.previousNode(tNode));
 
 	}
+
 }

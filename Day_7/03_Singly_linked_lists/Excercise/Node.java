@@ -1,9 +1,22 @@
 public class Node {
-	public int n;
-	public Node next;
+	int data;
+	Node next;
 
-	public String toString()
-	{
-		return " n = " + n;
+	public Node(int data) {
+		this.data = data;
+		this.next = null;
+
+	}
+
+	public Node(){
+		/**
+		* Constructor method to fix error;
+		* constructor Node in class Node cannot be applied to given types
+		* in method printNodes()
+		*/
+	}
+
+	public String toString(){
+		return data + "";
 	}
 }

@@ -1,33 +1,61 @@
-public class LinkedList 
-{
-	private Node Head;
+public class LinkedList {
+	Node head;
+	Node tail;
+	int size;
 
-	void add(Node n)
-	{
-		if (this.Head == null) 
-		{
-			this.Head = n;
-		} 
-		else 
-		{
-			Node temp = Head;
-			while (temp.next != null) 
-			{
-				temp = Head.next;
+
+	public void addNode(Node newNode){
+	/** 
+	* Add method
+	* Head 					     Tail
+	*  |					       |
+	* Node1 -> Node2 -> Node3 -> Node4
+	* 
+	*/
+
+	
+		if (size == 0){
+			head = newNode;
+			tail = newNode;
+			size++;
+		}
+		else {
+			tail.next = newNode;
+			tail = newNode;
+		}
+
+	}
+
+	public Node previousNode(Node thisNode){
+		Node temp = new Node();
+		temp = head;
+		if (temp.next == thisNode) {
+			return temp;
+		} else {
+			while (temp.next != thisNode) {
+				temp = temp.next;
 			}
-			temp.next = n;
+			return temp;
 		}
 	}
 
-	void printList()
-	{
-		Node temp = Head;
-		while (temp.next != null) 
-		{
-			System.out.println(temp); // the node is printed due to toString() method
-			temp = Head.next;
+	
+	public void printNodes(){
+
+		Node newNode = new Node(); 
+		newNode = head;
+		System.out.println(newNode);
+		while (newNode.next != null){
+			System.out.println(newNode.next);
+			newNode = newNode.next;
 		}
-		System.out.println(temp); // the node is printed due to toString() method
-			
 	}
+
+
+
+
+	// Print Method
+
+	// Delete Method
+
 }
