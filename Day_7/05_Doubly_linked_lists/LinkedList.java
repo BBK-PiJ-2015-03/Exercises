@@ -77,16 +77,20 @@ public class LinkedList {
 			if (tail == temp){
 				tail = previousNode(data);
 				previousNode(data).next = null;
+				temp.prev = null;
 				size--;
 				return true;
 			} else {
 				if (head == temp) {
 					head = temp.next;
+					temp.next.prev = head;
 					temp.next = null;
 					size--;
 					return true;
 				} else {
 					previousNode(data).next = temp.next;
+					temp.next.prev = previousNode(data);
+					temp.prev = null;
 					size--;
 					return true;
 				}
