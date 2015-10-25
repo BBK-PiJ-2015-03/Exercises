@@ -1,12 +1,17 @@
 public class Supermarket implements PersonQueue
 {
 	Person head;
+	Person tail;
 
 	public void insert(Person person){
-		if (head == null) {
+		if (head == null){
 			head = person;
+			tail = person;
+			System.out.println(person.name + ", aged " + person.age + " is the first to join the que.");
 		} else {
-			head.addPerson(person);
+			tail.next = person;;
+			tail = person;
+			System.out.println(person.name + ", aged " + person.age + " has joined the que.");
 		}
 	}
 	

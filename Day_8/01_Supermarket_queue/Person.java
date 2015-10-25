@@ -19,6 +19,8 @@ public class Person
 				temp = temp.next;
 			}		
 			temp.next = person;
+			System.out.println(temp.name + ", aged " + temp.age + " has joined in the que.");
+
 		}
 	}
 
