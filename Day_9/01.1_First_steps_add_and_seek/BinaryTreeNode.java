@@ -1,7 +1,7 @@
 public class BinaryTreeNode {
-	int value = 0;
-	BinaryTreeNode right;
-	BinaryTreeNode left;
+	private int value;
+	private BinaryTreeNode right;
+	private BinaryTreeNode left;
 	
 	public BinaryTreeNode(int value){
 		this.value = value;
@@ -9,9 +9,61 @@ public class BinaryTreeNode {
 		left = null;
 	}
 	
-	public BinaryTreeNode() {
-		//empty constructor
+	public int depth(){
+		int countLeft = 0, countRight = 0;
+		if (left == null && right == null){
+			return 0;
+		} 
+		if (left != null){
+			countLeft = 1 + left.depth();
+		}
+		if (right != null){
+			countRight = 1 + right.depth();
+		}
+		if (countRight >= countLeft) {
+			return countRight;
+		} else {
+			return countLeft;
+		}
 	}
+	
+	public String toString(){
+		return "[" + printTree() + "]";
+	}
+	
+	public String printTree(){
+		String str = "" + value;
+		if (left == null){
+			str += " L[] ";
+		} else {
+			str += " L[" + left.printTree() + "]"; 
+		}
+		if (right == null){
+			str += " R[]";
+		} else {
+			str += " R[" + right.printTree() + "]"; 
+		}
+		return "" + str + "";
+
+	}
+	
+	public String toStringSimple(){
+		return "[" + printSimpleTree() + "]";
+	}
+	
+	public String printSimpleTree(){
+		String str = "" + value;
+		if (left != null){
+			str += " [" + left.printSimpleTree() + "]"; 
+		}
+		if (right != null){
+			str += " [" + right.printSimpleTree() + "]"; 
+		}
+		return "" + str + "";
+
+	}
+		
+		
 
 	public void add(int newNumber){
 		if (newNumber > this.value){
@@ -26,10 +78,11 @@ public class BinaryTreeNode {
 				left = new BinaryTreeNode(newNumber);
 				System.out.println(newNumber + " has been added to the tree");
 			} else {
-				left.add(newNumber);
+					left.add(newNumber);
 			}
 		}
 	}
+	
 	
 	
 	public int getMax(){
@@ -41,11 +94,15 @@ public class BinaryTreeNode {
 	}
 
 	public int getMin(){
-		BinaryTreeNode holder = right;
-		while (holder.left != null) {
-			holder = holder.left;
+		if (this.left == null){
+			return this.value;
+		} else {	
+			BinaryTreeNode holder = left;
+			while (holder.left != null) {
+				holder = holder.left;
+			}
+			return holder.value;
 		}
-		return holder.value;
 	}
 	
 }
