@@ -9,6 +9,60 @@ public class BinaryTreeNode {
 		left = null;
 	}
 	
+	public int getValue(){
+		return this.value;
+	}
+	
+	public boolean remove(int target){
+		/*
+		 * Scenario 1: target is root node
+		 * Scenario 2: target is a leaf
+		 */
+		
+		if (target == this.value){
+			if (right != null){
+				//this.value = right.getMin();
+				int temp = right.getMin();
+				previousNode(temp).left = null;
+				this.value = temp;
+				return true;
+			} else if (left != null){
+				int temp = left.getMax();
+				previousNode(temp).right = null;
+				this.value = temp;		
+				return true;
+			} else {
+				System.out.println("Target node was not found");	
+				return false;
+			}
+		} else {
+			if (target > this.value && this.right != null){
+			right.remove(target);
+			} else if (this.left != null){
+			left.remove(target);
+			}	
+		}
+		
+		return false;
+		
+	}
+	
+	public BinaryTreeNode previousNode(int target) {
+		
+		if (this.right != null && this.right.value == target){
+			return this; 
+		}
+		if (this.left != null && this.left.value == target){
+			return this;
+		}
+		
+		if (target > this.value){
+			return this.right.previousNode(target);
+		} else {
+			return this.left.previousNode(target);
+		}
+	}
+	
 	public int depth(){
 		int countLeft = 0, countRight = 0;
 		if (left == null && right == null){
@@ -83,7 +137,17 @@ public class BinaryTreeNode {
 		}
 	}
 	
-	
+	public boolean contains(int target){
+		if (this.value == target){
+			return true;
+		} else if (target > this.value && this.right != null){
+			return this.right.contains(target);
+		} else if (this.left != null){
+			return this.left.contains(target);
+		} else {
+			return false;
+		}
+	}
 	
 	public int getMax(){
 		BinaryTreeNode holder = right;
@@ -104,5 +168,6 @@ public class BinaryTreeNode {
 			return holder.value;
 		}
 	}
+
 	
 }

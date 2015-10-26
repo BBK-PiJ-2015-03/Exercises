@@ -54,6 +54,45 @@ public class testTree {
 		System.out.println("The number of levels in this tree is " + bt.depth());
 		
 		
+
+		/************************************************
+		 * Testing previous node method
+		 ************************************************/
+		System.out.println("");
+		System.out.println("Previous node to node[5] is node[" + bt.previousNode(5).getValue() + "]");
+		
+
+
+		/************************************************
+		 * Checking if tree contains target node
+		 ************************************************/
+		System.out.println("");
+		System.out.print("Does tree contain node[3]: ");
+		if (!bt.contains(3)){
+			System.out.print("No");
+		} else {
+			System.out.print("Yes");
+		}
+		
+		
+		/************************************************
+		 * Remove a targeted node from the tree
+		 ************************************************/
+		System.out.println("");
+		System.out.println("Representation of the tree before node[6] removal");
+		System.out.println(bt.toStringSimple());
+		System.out.println("");
+		bt.remove(6);
+		System.out.println("Representation of the tree after node[6] removal");
+		System.out.println(bt.toStringSimple());
+		System.out.println("");
+		
+		System.out.println("Representation of the tree before node[11] removal");
+		System.out.println(bt.toStringSimple());
+		System.out.println("");
+		bt.remove(11);
+		System.out.println("Representation of the tree after node[11] removal");
+		System.out.println(bt.toStringSimple());
 		
 	}
 }
