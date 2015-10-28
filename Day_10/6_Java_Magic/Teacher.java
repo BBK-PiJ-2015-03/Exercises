@@ -8,6 +8,6 @@ public class Teacher {
 		return name;
 	}
 	public void teach(String lessonName) {
-		System.out.println("Teaching lesson: " + lessonName);
+		System.out.println("teaching lesson: " + lessonName);
 	}
 }

@@ -4,9 +4,13 @@
 */
 public class Lecturer extends Teacher {
 	/**
-	* I believe this class needs a constructor method
+	* I have added a constructor method as required
 	*/
+	public Lecturer(String name){
+		super(name);
+	}
+
 	public void doResearch(String topic) {
-		System.out.println("Doing research on: " + topic);
+		System.out.println("doing research on: " + topic);
 	}
 }
