@@ -1,7 +1,7 @@
 /**
 * This class is for mammals.
 */
-public Mammal implements Animal{
+public class Mammal implements Animal{
 	private String species = null;
 	
 	public Mammal(String species){
@@ -9,32 +9,34 @@ public Mammal implements Animal{
 	}
 
 	public void makeSound(){
-		if ( this.species.equals("Dolphin") || this.species.equals("Whale")){
+		if (this.species.equals("Dolphin") || this.species.equals("Whale")){
 			System.out.println(this.species + " says: *eeeek eeeek....*");
-		} else if ( this.species.equals("Cat") {
+		} else if (this.species.equals("Shark")){
+			System.out.println(this.species + " says: *chomp chomp");
+		} else if (this.species.equals("Cat")){
 			System.out.println(this.species + " says: *meow*");
 		} else if (this.species.equals("Dog")){
 			System.out.println(this.species + " says: *bark*");
 		} else if (this.species.equals("Bear")){
 			System.out.println(this.species + " says: *grrrrrr...*");
 		} else if (this.species.equals("Whale") || this.species.equals("Lizard")){
-			System.out.println(this.species + " *hissssssssssss...* ")
+			System.out.println(this.species + " says: *hissssssssssss...* ");
 		} else if (this.species.equals("Monkey")){
-			System.out.println(this.species + " *oooh oooh eeeh aaah* ")	
+			System.out.println(this.species + " says: *oooh oooh eeeh aaah* ");
 		} else {
-			System.out.println("Unrecognized species")
+			System.out.println("Unrecognized species");
 		}
 	}
 
 	public void call(){
-		if ( this.species.equals("Dolphin") || this.species.equals("Whale")){
+		if ( this.species.equals("Dolphin") || this.species.equals("Whale") || this.species.equals("Shark")){
 			System.out.println(this.species + " will not come...");
-		} else if ( this.species.equals("Bear") || this.species.equals("Car") || this.species.equals("Dog") || this.species.equals("Monkey")){
-			System.out.println(this.species + " coming...")
+		} else if (this.species.equals("Bear") || this.species.equals("Car") || this.species.equals("Cat") || this.species.equals("Dog") || this.species.equals("Monkey")){
+			System.out.println(this.species + " coming...");
 		} else {
-			System.out.println("Unrecognized species")
+			System.out.println("Unrecognized species");
 		}
-
+	}
 
 	public void reproduce(){
 		giveBirth();

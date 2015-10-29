@@ -7,7 +7,7 @@ public interface Animal {
 	*/
 	public void makeSound();
 	/**
-	* This method will call (e.g. cat call will be 'meow')
+	* This method will print how the animal reproduces (e.g. bird will lay eggs)
 	*/
 	public void reproduce();
 	
