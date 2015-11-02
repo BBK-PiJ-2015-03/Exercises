@@ -1,3 +1,2 @@
-# Exercises
-PiJ Module
+# PiJ
 All Exercises I have attempted (and pushed)
