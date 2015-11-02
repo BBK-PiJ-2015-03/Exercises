@@ -1,5 +1,5 @@
 /**
-* This is the interface for all animals
+* This is the test interface for animals
 */
 public interface TestAnimal {
 	/**

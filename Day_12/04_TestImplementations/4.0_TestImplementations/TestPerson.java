@@ -1,5 +1,5 @@
 /**
-* This is the interface for all persons
+* This is the test interface Person
 */
 public interface TestPerson {
 	/**
