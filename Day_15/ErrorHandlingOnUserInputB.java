@@ -23,15 +23,15 @@ public class ErrorHandlingOnUserInputB {
 
 	public int numberInput(){
 		int n = 0;
-		try {
-			System.out.print("> ");
-			String str = System.console().readLine();
-			n = Integer.parseInt(str);
-		} catch (NumberFormatException ex) {
-			ex.printStackTrace();
-			System.out.println("ERROR: Only numbers are valid");
+		while(true){
+			try {
+				System.out.print("> ");
+				n = Integer.parseInt(System.console().readLine());
+				return n;
+			} catch (NumberFormatException ex) {
+				System.out.println("ERROR: Only numbers are valid");
+			}
 		}
-		return n;
 	}
 
 	public int workMean(int[] iArray){
