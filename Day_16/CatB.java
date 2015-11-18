@@ -12,12 +12,12 @@ public class CatB{
 
 	public void printFile(String[] array, int i){
 		File file = new File(array[i]);
-		System.out.println("=================================");
-		System.out.println("File Name: " + array[i]);
-		System.out.println("=================================");
 		BufferedReader in = null;
 		try {
 			if(file.exists()){
+				System.out.println("=================================");
+				System.out.println("File Name: " + array[i]);
+				System.out.println("=================================");
 				String line;
 				in = new BufferedReader(new FileReader(file));
 				while((line = in.readLine()) != null){
