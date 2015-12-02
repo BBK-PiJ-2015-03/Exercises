@@ -17,7 +17,7 @@ public class TextLoop implements Runnable{
 	
 	public static void main(String args[]) {
 		BlockingQueue<Runnable> workQueue = new ArrayBlockingQueue<Runnable>(100);
-		Executor e = new ThreadPoolExecutor(10, 20, 1000, TimeUnit.NANOSECONDS, workQueue);
+		Executor e = new ThreadPoolExecutor(10, 20, 1, TimeUnit.SECONDS, workQueue);
 		if (args.length < 1 || (!args[0].equals("0") && !args[0].equals("1"))) {
 			System.out.println("USAGE: java TextLoop <mode>");
 			System.out.println(" mode 0: without threads");
@@ -28,10 +28,11 @@ public class TextLoop implements Runnable{
 				r.run();
 			}
 		} else {
-			for (int i = 0; i < 100000; i++) {
+			for (int i = 0; i < 100; i++) {
 				e.execute(new TextLoop("Thread " + i));
 			}
 			((ThreadPoolExecutor)e).shutdown();
+			System.out.println("I HAVE SHUTDOWN!");
 		}
 	}
 }
