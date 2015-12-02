@@ -1,9 +1,7 @@
 public class Counter2 {
 	private int n = 0;
 	public void increase() {
-		synchronized(this){
-			n++;
-		}
+		n += 1;
 	}
 	public synchronized int getCount() {
 		return n;

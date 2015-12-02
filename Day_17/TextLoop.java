@@ -24,7 +24,7 @@ public class TextLoop implements Runnable {
 				r.run();
 			}
 		} else {
-			for (int i = 0; i < 100000; i++) {
+			for (int i = 0; i < 1000000; i++) {
 				Runnable r = new TextLoop("Thread " + i);
 				Thread t = new Thread(r);
 				t.start();
